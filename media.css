@@ -1,0 +1,314 @@
+/* Responsive Styling */
+@media screen and (max-width: 1200px) {
+  .section-1 .main h1 {
+    font-size: 40px;
+    width: 90%;
+  }
+  .section-1 .main button {
+    width: 180px;
+  }
+  .section-2 .paragraph h1 {
+    font-size: 36px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    height: auto;
+  }
+
+  .burger-menu{
+    height:690px ;
+  }
+
+  .section-1 .main {
+    width: 100%;
+  }
+
+  .section-2 {
+    min-height: 1356px;
+  }
+  .section-2 .paragraph {
+    gap: 30px;
+  }
+
+  .section-2 .paragraph h1 {
+    width: 540px;
+    font-size: 48px;
+  }
+  .section-2 .paragraph p {
+    width: 530px;
+    font-size: 18px;
+  }
+
+  .section-3 {
+    min-height: 1400px;
+  }
+
+  .section-3 .section-3-img {
+    width: 478px;
+    height: 478px;
+    left: 238px;
+  }
+
+  .section-3 .section-3-text {
+    width: 540px;
+    height: 890px;
+    padding-left: 20px;
+    top: 500px;
+    left: 210px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-4 {
+    min-height: 1310px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-4 .leftBox h1 {
+    font-size: 48px;
+    width: 80%;
+  }
+
+  .section-5 {
+    min-height: 1416px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-5 .sec5-round {
+    display: none;
+  }
+
+  .section-5 .sec5-round2 {
+    width: 112px;
+    height: 112px;
+    left: 220px;
+    top: 1150px;
+  }
+
+  .section-5 .section-5-img {
+    width: 496px;
+    height: 496px;
+    top: 600px;
+    right: 210px;
+  }
+
+  .section-5 .section-5-text {
+    width: 528px;
+    height: 614px;
+  }
+
+  .section-5 .little-img {
+    top: 1050px;
+  }
+
+  .section-6 {
+    min-height: 1254px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .section-6 .info {
+    position: unset;
+  }
+  .section-6 .contact-us {
+    position: unset;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    width: 250px;
+    height: 690px;
+  }
+  .section-1 .main h1 {
+    font-size: 32px;
+  }
+  .section-1 .main button {
+    width: 160px;
+  }
+  .section-2 .paragraph h1 {
+    font-size: 28px;
+  }
+
+  .section-3 .section-3-img{
+    left: 150px;
+  }
+
+  .section-3 .section-3-text{
+    left: 0;
+  }
+
+  .section-3 .section-3-text,
+  .section-6 .contact-us {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .section-4 .leftBox h4 {
+    width: 400px;
+  }
+
+  .section-4 .leftBox p {
+    width: 400px;
+  }
+
+  .section-4 .rightBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-6 {
+    min-height: 1254px;
+    flex-direction: column;
+  }
+  .section-6 .info {
+    position: unset;
+  }
+  .section-6 .contact-us {
+    position: unset;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header .burger {
+    width: 25px;
+    height: 25px;
+  }
+
+  header .burger-menu {
+    height: 690px;
+  }
+
+  .section-1 .main h1,
+  .section-2 .paragraph h1 {
+    font-size: 24px;
+  }
+  .section-1 .main button,
+  .submitButton {
+    width: 150px;
+    font-size: 14px;
+  }
+
+  .section-3 {
+    min-height: 1124px;
+  }
+
+  .section-3 .gray {
+    display: block;
+  }
+
+  .section-3 .section-3-text {
+    width: 340px;
+    height: 784px;
+    left: 100px;
+    top: 340px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .section-3 .section-3-text .lorem {
+    width: 300px;
+  }
+
+  .section-3 .section-3-img {
+    width: 284px;
+    height: 284px;
+    left: 130px;
+  }
+
+  .section-4 {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 0;
+  }
+
+  .section-4 .leftBox h4 {
+    width: 300px;
+  }
+
+  .section-4 .leftBox p {
+    width: 300px;
+  }
+
+  .section-4 .rightBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-4 .block {
+    height: 300px;
+  }
+
+  .section-4 .block p {
+    width: 300px;
+  }
+
+  .section-5 {
+    min-height: 1200px;
+    padding-inline: 0;
+  }
+
+  .section-5 .section-5-text h1 {
+    width: 480px;
+  }
+  .section-5 .section-5-img {
+    width: 274px;
+    height: 274px;
+    top: 600px;
+    left: 170px;
+  }
+
+  .section-5 .sec5-round2 {
+    width: 112px;
+    height: 112px;
+    top: 800px;
+    left: 150px;
+    z-index: 15;
+  }
+
+  .section-5 .sec5-round {
+    display: block;
+  }
+
+  .section-5 .little-img {
+    width: 224px;
+    height: 224px;
+    left: 300px;
+    top: 900px;
+  }
+  .section-6 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-6 .contact-us {
+    width: 100%;
+    position: unset;
+  }
+
+  .section-6 .info {
+    width: 100%;
+    position: unset;
+  }
+
+  .section-6 form {
+    align-items: center;
+  }
+
+  .section-6 .submitButton {
+    width: 320px;
+  }
+
+  .section-6 .contact-us form label,
+  .section-6 .infoBox h1 {
+    font-size: 18px;
+  }
+}
