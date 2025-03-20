@@ -1,0 +1,827 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .burger {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+header .burger:hover {
+  background-color: purple;
+}
+
+.burger-menu {
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.blurred > *:not(.burger-menu) {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.burger-menu button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.burger-menu a {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 100px;
+  left: 40%;
+  text-decoration: none;
+}
+
+.section-1 {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/ff187b64d5965cdd81ab7e64/FDS-min.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding-block: 50px;
+}
+
+.section-1 .main {
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+
+.section-1 .main h1 {
+  width: 540px;
+  height: 102px;
+  text-align: center;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52.8px;
+  opacity: 0;
+}
+
+.section-1.start-animate .main h1 {
+  opacity: 1;
+  animation: rotate 2000ms ease-in-out forwards;
+}
+
+.section-1 .main button {
+  width: 200px;
+  height: 60px;
+  color: #474d75;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.section-1.start-animate .main button {
+  opacity: 1;
+  animation: translate 2500ms ease-in-out forwards;
+}
+
+.section-1 .main button:hover {
+  background-color: purple;
+  color: white;
+}
+
+.section-1 .main p {
+  color: white;
+  font-size: 24px;
+  line-height: 26px;
+  opacity: 0;
+}
+
+.section-1.start-animate .main p {
+  opacity: 1;
+  animation: slideIn 3000ms ease-in-out forwards;
+}
+
+.section-1 .main p a {
+  color: white;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.section-1 .main p a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+.section-1 .main .main-img {
+  opacity: 0;
+}
+
+.section-1.start-animate .main .main-img {
+  opacity: 1;
+  animation: slideIn 1500ms ease-in-out forwards;
+}
+
+.section-2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(229, 229, 229);
+  padding: 40px 0 40px 0;
+}
+
+.section-2 .paragraph {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-2 .paragraph h1 {
+  width: 720px;
+  height: 100px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: center;
+  opacity: 0;
+}
+
+.section-2.start-animate .paragraph h1 {
+  opacity: 1;
+  animation: slideIn 1500ms ease-in-out forwards;
+}
+
+.section-2 .paragraph p {
+  width: 530px;
+  height: 72px;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  opacity: 0;
+}
+
+.section-2.start-animate .paragraph p {
+  opacity: 1;
+  animation: scale 2500ms ease-in-out forwards;
+}
+
+.section-2 .box-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  opacity: 0;
+}
+
+.section-2.start-animate .box-container {
+  opacity: 1;
+  animation: translate 3500ms ease-in-out forwards;
+}
+
+.boxes {
+  width: 350px;
+  height: 340px;
+  border: none;
+  background-color: white;
+  line-height: 26px;
+  box-shadow: 5px 5px 10px 1px #979595;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxes ul {
+  list-style: none;
+  width: 288px;
+  height: 200px;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.boxes ul li span {
+  color: rgb(238, 77, 198);
+  font-size: 20px;
+  line-height: 14px;
+}
+
+.boxes button {
+  width: 350px;
+  height: 90px;
+  border: none;
+  background-color: rgb(58, 80, 249);
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  line-height: 26px;
+  text-align: left;
+  padding-left: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.section-3 {
+  width: 100%;
+  height: 828px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.section-3 .section-3-img {
+  width: 514px;
+  height: 514px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border: 14px solid rgb(255, 255, 255);
+  position: absolute;
+  z-index: 10;
+  left: 50px;
+  top: 100px;
+  opacity: 0;
+}
+
+.section-3.start-animate .section-3-img {
+  opacity: 1;
+  animation: moveAndRotate 2000ms ease-in-out forwards;
+}
+
+.section-3 .section-3-text {
+  width: 942px;
+  height: 628px;
+  background-color: rgb(58, 80, 249);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 500px;
+  position: absolute;
+  z-index: 1;
+  right: 50px;
+  top: 200px;
+  opacity: 0;
+}
+
+.section-3.start-animate .section-3-text {
+  opacity: 1;
+  animation: moveFromRight 3000ms ease-in-out forwards;
+}
+
+.read-more-button {
+  width: 200px;
+  height: 60px;
+  background-color: rgb(58, 80, 249);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.read-more-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(58, 80, 249);
+}
+
+.section-3-link,
+a {
+  color: rgb(255, 255, 255);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  font-style: italic;
+}
+
+.section-3 .section-3-text p {
+  width: 402px;
+  height: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  color: rgb(255, 255, 255);
+}
+
+.section-3 .section-3-text h1 {
+  color: rgb(255, 255, 255);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.section-3 .gray {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(229, 229, 229);
+  opacity: 0;
+}
+
+.section-3.start-animate .gray {
+  opacity: 1;
+  animation: scale 1000ms ease-in-out forwards;
+}
+
+.section-4 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding-inline: 50px;
+}
+
+.section-4 .leftBox {
+  width: 50%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.section-4 .leftBox h1 {
+  width: 232px;
+  height: 80px;
+  color: rgb(58, 80, 249);
+  font-size: 72px;
+  line-height: 26px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  opacity: 0;
+}
+
+.section-4.start-animate .leftBox h1 {
+  animation: moveAndRotate 1500ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.section-4 .leftBox h4 {
+  width: 450px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  opacity: 0;
+}
+
+.section-4.start-animate .leftBox h4 {
+  animation: translate 2500ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.section-4 .leftBox p {
+  width: 408px;
+  height: 84px;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  opacity: 0;
+}
+
+.section-4.start-animate .leftBox p {
+  animation: translate 3000ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.section-4 .rightBox {
+  width: 50%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.phone-icon {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+
+.section-4.start-animate .phone-icon {
+  animation: translate 1500ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.block {
+  width: 534px;
+  height: 208px;
+  display: flex;
+  gap: 50px;
+}
+
+.block .blockText {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.block .blockText h1 {
+  color: rgb(58, 80, 249);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 0;
+}
+
+.section-4.start-animate .block .blockText h1 {
+  animation: translateX 2500ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.block .blockText p {
+  width: 386px;
+  height: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  opacity: 0;
+}
+
+.section-4.start-animate .block .blockText p {
+  animation: slideIn 3000ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.section-5 {
+  width: 100%;
+  min-height: 1100px;
+  padding-inline: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-5 .sec5-round {
+  width: 190px;
+  height: 190px;
+  border: 34px solid rgb(58, 80, 249);
+  color: rgb(58, 80, 249);
+  position: absolute;
+  right: 80px;
+  top: 50px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.section-5.start-animate .sec5-round {
+  animation: scale 3000ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.section-5 .sec5-round2 {
+  width: 170px;
+  height: 170px;
+  background-color: rgb(58, 80, 249);
+  position: absolute;
+  left: 80px;
+  top: 700px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.section-5.start-animate .sec5-round2 {
+  animation: scale 2000ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.section-5 .little-img {
+  width: 334px;
+  height: 334px;
+  position: absolute;
+  z-index: 20;
+  border-radius: 50%;
+  border: 20px solid rgb(58, 80, 249);
+  top: 680px;
+  left: 400px;
+  opacity: 0;
+}
+
+.section-5.start-animate .little-img {
+  animation: translateX 4000ms ease-in-out forwards;
+}
+
+.section-5 .section-5-text {
+  width: 612px;
+  height: 602px;
+  background-color: rgb(58, 80, 249);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  padding-left: 50px;
+  top: 50px;
+}
+
+.section-5.start-animate .section-5-text {
+  animation: translate 2000ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.section-5 .section-5-text p {
+  width: 402px;
+  height: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  color: rgb(255, 255, 255);
+}
+
+.section-5 .section-5-text h1 {
+  color: rgb(255, 255, 255);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.section-5 .section-5-img {
+  width: 650px;
+  height: 650px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border: 14px solid rgb(255, 255, 255);
+  position: absolute;
+  z-index: 10;
+  right: 50px;
+  top: 220px;
+  opacity: 0;
+  box-shadow: 5px 5px 10px 1px #000000;
+}
+
+.section-5.start-animate .section-5-img {
+  animation: rotate 2000ms ease-in-out forwards;
+  opacity: 1;
+}
+
+.section-6 {
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-6 .contact-us {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  opacity: 0;
+}
+
+.section-6.start-animate .contact-us{
+  animation: moveFromLeft 2000ms ease-in-out forwards;
+}
+
+.section-6 .contact-us h1 {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.section-6 .contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section-6 .contact-us form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-link {
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(58, 80, 249);
+  font-size: 16px;
+}
+
+.nameInput,
+.emailInput {
+  width: 454px;
+  height: 48px;
+  padding: 10px 12px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+.messageInput {
+  width: 454px;
+  height: 124px;
+  padding: 10px 12px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+.submitButton {
+  width: 454px;
+  height: 46px;
+  background-color: rgb(58, 80, 249);
+  color: white;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.submitButton:hover{
+  background-color: rgb(77, 89, 183);
+}
+
+.section-6 .info{
+  width: 50%;
+  height: 700px;
+  background-color:rgb(229, 229, 229) ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  opacity: 0;
+}
+
+.section-6.start-animate .info{
+  animation: moveFromRight 2000ms ease-in-out forwards;
+}
+
+.infoBox{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.infoBox h1{
+  color:rgb(58, 80, 249) ;
+}
+
+.successButton{
+  width: 454px;
+  height: 60px;
+  background-color:rgb(98, 197, 132);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@keyframes moveFromRight {
+  from {
+    opacity: 0;
+    right: -1000px;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes moveFromLeft {
+  from {
+    opacity: 0;
+    left: -500px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+@keyframes moveAndRotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+    left: -200px;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes translate {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes translateX {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
